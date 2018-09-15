@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author"      content="Sergey Pozhilov (GetTemplate.com)">
+	
+	<title>WELCOME</title>
+
+	<link rel="shortcut icon" href="assets/images/gt_favicon.png">
+	
+	<!-- Bootstrap itself -->
+	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+	<!-- Custom styles -->
+	<link rel="stylesheet" href="assets/css/magister.css">
+
+	<!-- Fonts -->
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href='http://fonts.googleapis.com/css?family=Wire+One' rel='stylesheet' type='text/css'>
+	
+	<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js?ver=1.3.2' type='text/javascript'></script>
+	
+	 <script>
+    $(function(){
+        var theTimeout;
+        var hasilWaktu;
+        
+        function time(){
+        var now = new Date();
+        var jam = tambahkanNol(now.getHours());
+        var menit = tambahkanNol(now.getMinutes());
+        var detik = tambahkanNol(now.getSeconds());        
+        hasilWaktu=jam+":"+menit;
+        updateBackground(hasilWaktu);
+        theTimeout=setTimeout(time,1000);
+        $("#reviewWaktu").html("sekarang pukul<br />"+jam+":"+menit+":"+detik);
+        }
+        theTimeout=setTimeout(time,1000);
+        
+        function tambahkanNol(i) {//untuk menambahkan nol jika jam atau menit bilangannya cuma 1 angka.
+            var i;
+            if (i < 10) {
+                i = "0" + i;
+            }
+            return i;
+        }
+        function updateBackground(nilaiwaktu){//ini untuk merubah background sesuai jam dan menit yang di atur
+            if(nilaiwaktu>="00:00" && nilaiwaktu<="05:59"){
+                $("html,body").css({"background-image":"url('assets/images/body8.jpg')"});
+					$(".title").html("<b><u <span style=color:white>Good Night, Rheyno</span></u></b>");
+            }else if(nilaiwaktu>="06:00" && nilaiwaktu<="11:59"){
+                $("html,body").css({"background-image":"url('assets/images/body9.jpg')"});
+				$(".title").html("<b><u <span style=color:white>Good Night, Rheyno</span></u></b>");
+            }else if(nilaiwaktu>="12:00" && nilaiwaktu<="18:59"){
+                $("html,body").css({"background-image":"url('assets/images/body10.jpg')"});
+				$(".title").html("<b><u <span style=color:white>Good Afternoon, Rheyno</span></u></b>");
+				$(".subtitle").html("<b <span style=color:white></span></b>");
+			}else if(nilaiwaktu>="19:00" && nilaiwaktu<="23:59"){
+                $("html,body").css({"background-image":"url('assets/images/body12.jpg')"});
+				$(".title").html("<b><u <span style=color:white>Good Evening, Rheyno</span></u></b>");
+           
+            }
+        }
+    });
+    </script>
+	
+	
+
+</head>
+
+
+<!-- use "theme-invert" class on bright backgrounds, also try "text-shadows" class -->
+<body class="theme-invert">
+
+
+<nav class="mainmenu">
+	<div class="container">
+		<div class="dropdown">
+			<button type="button" class="navbar-toggle" data-toggle="dropdown"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+			<!-- <a data-toggle="dropdown" href="#">Dropdown trigger</a> -->
+			<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+				<li><a href="#head" class="active"><span style=color:white>Hello</a></li>
+				<li><a href="#about"><span style=color:white>About me</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+
+<!-- Main (Home) section -->
+<section class="section" id="head">
+	<div class="container">
+
+		<div class="row">
+			<div class="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1 text-center">	
+
+				<!-- Site Title, your name, HELLO msg, etc. -->
+				<h1 class="title"><b><u <span style="color:white">Hello Rheyno !!!</span></u></b></h1>
+				<h2 class="subtitle"><b><span style=color:white></span></b></h2>
+
+				<!-- Short introductory (optional) -->
+				<h2 class="tagline"><center><span style=color:white>
+					Today is Very Good Day. I Hope Your be Happy</span>
+				</h2></center>
+		<div style="margin: 0px 0px 0px; display: inline-block; text-align: center; width: 500px;"><div style="display: inline-block; padding: 2px 4px; margin: 0px 0px 5px; border: 1px solid rgb(204, 204, 204); text-align: center; background-color: transparent;"><a style="text-decoration: none; font-size: 13px; color: rgb(0, 0, 0);" href="http://localtimes.info/Asia/Indonesia/Jakarta/"><img src="http://localtimes.info/images/countries/id.png"="" border=0="" style="border:0;margin:0;padding:0"=""> Jakarta</a></div><script src="http://localtimes.info/clock.php?continent=Asia&country=Indonesia&city=Jakarta&cp1_Hex=000000&cp2_Hex=FFFFFF&cp3_Hex=000000&fwdt=500&ham=0&hbg=1&hfg=0&sid=0&mon=0&wek=0&wkf=0&sep=0&widget_number=1024" type="text/javascript"></script></div>
+				
+				<!-- Nice place to describe your site in a sentence or two -->
+				<div>
+				<li style="display:inline-block"><a href="http://google.com" class="btn btn-default btn-lg">Go To Google Now</li></a>
+				<li style="display:inline-block"><a href="http://gmail.com" class="btn btn-default btn-lg">Go To Gmail Now</li></a>
+				</div>
+			</div> <!-- /col -->
+		</div> <!-- /row -->
+		
+
+	</div>
+</section>
+
+<!-- Second (About) section -->
+<section class="section" id="about">
+	<div class="container">
+	
+		<h2 class="text-center title"><span style=color:white>About me</h2>
+		<div class="justify">  
+				<h3><center><span style=color:white>"My Name Is Rheyno Apria Pratama, I was Born in Klaten , 11 april 1998. My School in SMK Plus Bina Prestasi. This is Best School In Bekasi  :D  , My Old a 16 Years Old. I have a two Sister. My fafvorite food is Opor Ayam. This is a very very delicious food. and I like palying guitar</center></span></h3>    
+			<center><h4><p><span style=color:white> You Can Visit My Facebook Or Twitter :D</center></h4></p></span><br>
+			<p><center><h4><span style=color:white> THANKS FOR READING </p></center></h4></span>
+			<center>
+			<p><li><a href="https://www.facebook.com/rheyno.apria" class="btn btn-default btn-lg">Visit My Facebook</a></p>
+			<p><li><a href="https://twitter.com/rheynopratama" class="btn btn-default btn-lg">Visit My Twitter</a></p>
+			</center>
+			</div>
+			
+		</div>
+</section>
+
+
+
+	</div>
+</section>
+
+
+<!-- Load js libs only when the page is loaded. -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script src="assets/js/modernizr.custom.72241.js"></script>
+<!-- Custom template scripts -->
+<script src="assets/js/magister.js"></script>
+</script>
+<div class='copyright'><span style=color:white>Copyright © 2015 Edited By Rheyno Apria Pratama | Created By Serghey Pozhilov</span></div>  
+
+</body>
+</html>
